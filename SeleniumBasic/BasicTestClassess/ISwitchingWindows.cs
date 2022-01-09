@@ -13,7 +13,7 @@ using OpenQA.Selenium.Support.UI;
 
 namespace SeleniumBasic.BasicTestClassess
 {
-     class SwitchingWindows
+     class ISwitchingWindows
     {
         //[Test]
         //public void parentWindowID()
