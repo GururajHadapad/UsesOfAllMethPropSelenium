@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace SeleniumBasic.DataProvider
 {
     [TestFixture]
-    public class TestCaseSources
+    public class DataProvider
     {
         [Test]
         [TestCaseSource("dataDrivenTest")]
