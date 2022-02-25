@@ -148,19 +148,19 @@ namespace SeleniumBasic.BasicTestClassess
         //    driver.Quit();
         //}
 
-        //[Test]
-        //public void ReadTextFromTextField()
-        //// This method is used to read the text from hidden text field or text field
-        //{
-        //    IWebDriver driver = new ChromeDriver();
-        //    driver.Navigate().GoToUrl("https://www.facebook.com/");
-        //    IJavaScriptExecutor js = ((IJavaScriptExecutor)driver);
-        //    js.ExecuteScript("document.getElementById('email').value='abc123@gmail.com';");
-        //    Thread.Sleep(1000); 
-        //    // this line of code is used to get text from any text field and also it can be used to get text of hidden text field
-        //    string readTextField = js.ExecuteScript(" return document.getElementById('email').value").ToString();
-        //    Console.WriteLine(readTextField);
-        //    driver.Quit();
-        //}
+        [Test]
+        public void ReadTextFromTextField()
+        // This method is used to read the text from hidden text field or text field
+        {
+            IWebDriver driver = new ChromeDriver();
+            driver.Navigate().GoToUrl("https://www.facebook.com/");
+            IJavaScriptExecutor js = ((IJavaScriptExecutor)driver);
+            js.ExecuteScript("document.getElementById('email').value='abc123@gmail.com';");
+            Thread.Sleep(1000);
+            // this line of code is used to get text from any text field and also it can be used to get text of hidden text field
+            string readTextField = js.ExecuteScript(" return document.getElementById('email').value").ToString();
+            Console.WriteLine(readTextField);
+            driver.Quit();
+        }
     }
 }

@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,15 +20,19 @@ namespace SeleniumBasic.BasicTestClassess
 
          IWebDriver driver = new ChromeDriver();
             driver.Navigate().GoToUrl("https://www.facebook.com/");
+            string pwin = driver.CurrentWindowHandle;
+            ReadOnlyCollection<string> cwin = driver.WindowHandles;
             int count = driver.FindElements(By.CssSelector("*")).Count;//this gives all/number of elements
             Console.WriteLine(count);
-            int countlinks = driver.FindElements(By.CssSelector("a")).Count;//this gives all/number of links
+            IWebElement countlinks = driver.FindElement(By.CssSelector("a"));
             Console.WriteLine(countlinks);
             int countinput = driver.FindElements(By.CssSelector("input")).Count;//this gives all tag name which starts with input
             Console.WriteLine(countinput);
-            int countfooter = driver.FindElements(By.CssSelector("footer")).Count;//this gives all tag name which starts with footer
+            ReadOnlyCollection<IWebElement> countfooter = driver.FindElements(By.CssSelector("footer"));
             Console.WriteLine(countfooter);
-            driver.Quit();  
+            driver.Quit();
+
+
         }
     }
 }

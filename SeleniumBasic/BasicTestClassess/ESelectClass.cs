@@ -23,16 +23,16 @@ namespace SeleniumBasic.BasicTestClassess
            driver.FindElement(By.XPath("//a[@class='_42ft _4jy0 _6lti _4jy6 _4jy2 selected _51sy']")).Click();
             Thread.Sleep(5000);
             IWebElement date = driver.FindElement(By.XPath("//select[@id='day']"));
-            SelectElement sd = new SelectElement(date);
-            sd.SelectByIndex(1);
+            SelectElement selDate = new SelectElement(date);
+            selDate.SelectByIndex(12);
 
             IWebElement month = driver.FindElement(By.XPath("//select[@id='month']"));
             SelectElement sm = new SelectElement(month);
-            sd.SelectByValue("1");
+            sm.SelectByValue("1");
 
             IWebElement year = driver.FindElement(By.XPath("//select[@id='year']"));
             SelectElement sy = new SelectElement(year);
-            sd.SelectByText("2020");
+            sy.SelectByText("2000");
         }
     }
 }

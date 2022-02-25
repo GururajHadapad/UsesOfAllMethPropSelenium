@@ -42,17 +42,18 @@ namespace SeleniumBasic.DataProvider
         //    driver.Quit();
         //}
 
-        //[Test]
-        //public void openFireFoxBrowser()
-        //{
-        //   FirefoxOptions options=new FirefoxOptions();
-        //    options.AddArgument("--headless");
-        //    IWebDriver driver = new FirefoxDriver(options);
-        //    driver.Url = "https://www.facebook.com/";
-        //    string title = driver.Title;
-        //    Console.WriteLine(title);
-        //    driver.Quit();
-        //}
+        [Test]
+        public void openFireFoxBrowser()
+        {
+            FirefoxOptions options = new FirefoxOptions();
+            options.AddArgument("--headless");
+
+            IWebDriver driver = new FirefoxDriver(options);
+            driver.Url = "https://www.facebook.com/";
+            string title = driver.Title;
+            Console.WriteLine(title);
+            driver.Quit();
+        }
 
         //[Test]
         //public void openChromeBrowser()
